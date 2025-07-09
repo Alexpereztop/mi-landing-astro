@@ -1,11 +1,53 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title="StartAI">
+  <!-- Header -->
+  <header class="flex justify-between items-center px-8 py-6">
+    <h1 class="text-2xl font-bold tracking-wide">StartAI</h1>
+    <nav class="space-x-6 text-gray-300">
+      <a href="#features" class="hover:text-white">Características</a>
+      <a href="#pricing" class="hover:text-white">Precios</a>
+      <a href="#contact" class="hover:text-white">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="flex-grow flex flex-col items-center justify-center text-center px-4">
+    <h2 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+      Potencia tu <span class="text-indigo-400">negocio</span> con IA
+    </h2>
+    <p class="text-lg md:text-xl text-gray-400 max-w-2xl mb-8">
+      Herramientas impulsadas por inteligencia artificial que transforman la forma en que automatizas tus procesos y conectas con tus clientes.
+    </p>
+    <div class="space-x-4">
+      <a href="#" class="px-6 py-3 bg-indigo-500 hover:bg-indigo-600 rounded text-lg transition">Comenzar ahora</a>
+      <a href="#features" class="px-6 py-3 border border-gray-500 hover:border-white rounded text-lg transition">Ver más</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="px-8 py-20 bg-gray-800">
+    <h3 class="text-3xl font-bold text-center mb-12">Características principales</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div class="p-6 bg-gray-900 rounded-lg shadow hover:scale-105 transition">
+        <h4 class="text-xl font-semibold mb-2">Automatización</h4>
+        <p class="text-gray-400">Flujos inteligentes que optimizan tareas repetitivas y aumentan tu productividad.</p>
+      </div>
+      <div class="p-6 bg-gray-900 rounded-lg shadow hover:scale-105 transition">
+        <h4 class="text-xl font-semibold mb-2">Integraciones</h4>
+        <p class="text-gray-400">Conecta tus plataformas favoritas con unos pocos clics.</p>
+      </div>
+      <div class="p-6 bg-gray-900 rounded-lg shadow hover:scale-105 transition">
+        <h4 class="text-xl font-semibold mb-2">Análisis Avanzado</h4>
+        <p class="text-gray-400">Obtén insights accionables basados en tus datos en tiempo real.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 py-8 text-sm">
+    © 2025 StartAI. Todos los derechos reservados.
+  </footer>
+</BaseLayout>
