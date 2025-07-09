@@ -1,0 +1,294 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="API Documentation - StartAI">
+  <Header />
+  
+  <!-- Hero de API -->
+  <section class="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden section-padding-xl">
+    <div class="absolute inset-0 gradient-bg opacity-30"></div>
+    
+    <div class="container-xl">
+      <div class="relative z-10 animate-fade-in-up max-w-4xl mx-auto">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display mb-8 lg:mb-12 leading-tight">
+          Documentación <span class="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">API</span>
+        </h1>
+        <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto mb-12 lg:mb-16 leading-relaxed font-light">
+          Integra StartAI en tu aplicación con nuestra API RESTful completa y bien documentada
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#quickstart" class="btn btn-primary btn-lg font-heading group">
+            <span class="relative z-10">Comenzar</span>
+            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </a>
+          <a href="#examples" class="btn btn-secondary btn-lg font-heading group">
+            <span class="relative z-10">Ver ejemplos</span>
+            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contenido de la API -->
+  <section class="section-padding-lg relative bg-gradient-to-b from-transparent to-gray-900/20">
+    <div class="container-xl">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <!-- Sidebar de navegación -->
+        <div class="lg:col-span-1">
+          <div class="card card-glass p-6 sticky top-8">
+            <h3 class="text-lg font-heading text-white mb-6">Navegación</h3>
+            <nav class="space-y-2">
+              <a href="#quickstart" class="block text-gray-400 hover:text-blue-400 transition-colors duration-300 py-2">Inicio rápido</a>
+              <a href="#authentication" class="block text-gray-400 hover:text-blue-400 transition-colors duration-300 py-2">Autenticación</a>
+              <a href="#endpoints" class="block text-gray-400 hover:text-blue-400 transition-colors duration-300 py-2">Endpoints</a>
+              <a href="#rate-limits" class="block text-gray-400 hover:text-blue-400 transition-colors duration-300 py-2">Límites de tasa</a>
+              <a href="#errors" class="block text-gray-400 hover:text-blue-400 transition-colors duration-300 py-2">Manejo de errores</a>
+              <a href="#sdks" class="block text-gray-400 hover:text-blue-400 transition-colors duration-300 py-2">SDKs</a>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="lg:col-span-3 space-y-16">
+          <!-- Inicio rápido -->
+          <div id="quickstart">
+            <h2 class="text-3xl lg:text-4xl font-display mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Inicio rápido
+            </h2>
+            <div class="card card-glass p-8">
+              <h3 class="text-xl font-heading text-white mb-4">Obtén tu API Key</h3>
+              <p class="text-gray-400 mb-6">
+                Primero, necesitas obtener tu API key desde el panel de control de StartAI.
+              </p>
+              <div class="bg-gray-900/50 rounded-lg p-4 mb-6">
+                <pre class="text-green-400 text-sm"><code>curl -X GET "https://api.startai.com/v1/contacts" \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json"</code></pre>
+              </div>
+              <p class="text-gray-400 text-sm">
+                Reemplaza <code class="bg-gray-800 px-2 py-1 rounded text-blue-400">YOUR_API_KEY</code> con tu clave API real.
+              </p>
+            </div>
+          </div>
+
+          <!-- Autenticación -->
+          <div id="authentication">
+            <h2 class="text-3xl lg:text-4xl font-display mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Autenticación
+            </h2>
+            <div class="card card-glass p-8">
+              <p class="text-gray-400 mb-6">
+                Todas las solicitudes a la API de StartAI requieren autenticación mediante un token Bearer.
+              </p>
+              <div class="bg-gray-900/50 rounded-lg p-4 mb-6">
+                <pre class="text-green-400 text-sm"><code>Authorization: Bearer sk_live_1234567890abcdef...</code></pre>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h4 class="text-lg font-heading text-white mb-3">API Keys de prueba</h4>
+                  <p class="text-gray-400 text-sm">
+                    Usa <code class="bg-gray-800 px-2 py-1 rounded text-yellow-400">sk_test_</code> para desarrollo y pruebas.
+                  </p>
+                </div>
+                <div>
+                  <h4 class="text-lg font-heading text-white mb-3">API Keys de producción</h4>
+                  <p class="text-gray-400 text-sm">
+                    Usa <code class="bg-gray-800 px-2 py-1 rounded text-green-400">sk_live_</code> para aplicaciones en producción.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Endpoints -->
+          <div id="endpoints">
+            <h2 class="text-3xl lg:text-4xl font-display mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Endpoints principales
+            </h2>
+            
+            <!-- Contactos -->
+            <div class="card card-glass p-8 mb-8">
+              <h3 class="text-xl font-heading text-white mb-4">Contactos</h3>
+              <div class="space-y-4">
+                <div>
+                  <h4 class="text-lg font-heading text-gray-300 mb-2">Obtener contactos</h4>
+                  <div class="bg-gray-900/50 rounded-lg p-4">
+                    <pre class="text-green-400 text-sm"><code>GET /v1/contacts</code></pre>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-lg font-heading text-gray-300 mb-2">Crear contacto</h4>
+                  <div class="bg-gray-900/50 rounded-lg p-4">
+                    <pre class="text-green-400 text-sm"><code>POST /v1/contacts
+{
+  "email": "usuario@ejemplo.com",
+  "name": "Juan Pérez",
+  "company": "Mi Empresa"
+}</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Análisis -->
+            <div class="card card-glass p-8 mb-8">
+              <h3 class="text-xl font-heading text-white mb-4">Análisis</h3>
+              <div class="space-y-4">
+                <div>
+                  <h4 class="text-lg font-heading text-gray-300 mb-2">Obtener análisis</h4>
+                  <div class="bg-gray-900/50 rounded-lg p-4">
+                    <pre class="text-green-400 text-sm"><code>GET /v1/analytics?period=30d</code></pre>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-lg font-heading text-gray-300 mb-2">Predicciones</h4>
+                  <div class="bg-gray-900/50 rounded-lg p-4">
+                    <pre class="text-green-400 text-sm"><code>POST /v1/predictions
+{
+  "model": "conversion",
+  "data": {...}
+}</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Límites de tasa -->
+          <div id="rate-limits">
+            <h2 class="text-3xl lg:text-4xl font-display mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Límites de tasa
+            </h2>
+            <div class="card card-glass p-8">
+              <p class="text-gray-400 mb-6">
+                Para garantizar un rendimiento óptimo, aplicamos límites de tasa a todas las solicitudes API.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="text-center">
+                  <div class="text-2xl font-display bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
+                    1,000
+                  </div>
+                  <p class="text-gray-400 text-sm">Solicitudes por minuto</p>
+                </div>
+                <div class="text-center">
+                  <div class="text-2xl font-display bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
+                    50,000
+                  </div>
+                  <p class="text-gray-400 text-sm">Solicitudes por hora</p>
+                </div>
+                <div class="text-center">
+                  <div class="text-2xl font-display bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent mb-2">
+                    1M
+                  </div>
+                  <p class="text-gray-400 text-sm">Solicitudes por mes</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Manejo de errores -->
+          <div id="errors">
+            <h2 class="text-3xl lg:text-4xl font-display mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Manejo de errores
+            </h2>
+            <div class="card card-glass p-8">
+              <p class="text-gray-400 mb-6">
+                La API utiliza códigos de estado HTTP estándar para indicar el éxito o fracaso de las solicitudes.
+              </p>
+              <div class="space-y-4">
+                <div class="flex items-center space-x-4">
+                  <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded text-sm font-heading">200</span>
+                  <span class="text-gray-300">Éxito</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                  <span class="bg-red-500/20 text-red-400 px-3 py-1 rounded text-sm font-heading">400</span>
+                  <span class="text-gray-300">Solicitud incorrecta</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                  <span class="bg-red-500/20 text-red-400 px-3 py-1 rounded text-sm font-heading">401</span>
+                  <span class="text-gray-300">No autorizado</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                  <span class="bg-red-500/20 text-red-400 px-3 py-1 rounded text-sm font-heading">429</span>
+                  <span class="text-gray-300">Demasiadas solicitudes</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SDKs -->
+          <div id="sdks">
+            <h2 class="text-3xl lg:text-4xl font-display mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              SDKs y bibliotecas
+            </h2>
+            <div class="grid-responsive-lg">
+              <div class="card card-glass card-hover p-6 group">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-6 h-6 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                  </div>
+                  <h3 class="text-lg font-heading text-white ml-4">JavaScript</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-4">SDK oficial para Node.js y navegadores</p>
+                <a href="#" class="btn btn-secondary btn-sm font-heading group">
+                  <span class="relative z-10">Instalar</span>
+                  <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="card card-glass card-hover p-6 group">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                  </div>
+                  <h3 class="text-lg font-heading text-white ml-4">Python</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-4">Biblioteca oficial para Python 3.7+</p>
+                <a href="#" class="btn btn-secondary btn-sm font-heading group">
+                  <span class="relative z-10">Instalar</span>
+                  <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="card card-glass card-hover p-6 group">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-6 h-6 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                  </div>
+                  <h3 class="text-lg font-heading text-white ml-4">PHP</h3>
+                </div>
+                <p class="text-gray-400 text-sm mb-4">Biblioteca oficial para PHP 7.4+</p>
+                <a href="#" class="btn btn-secondary btn-sm font-heading group">
+                  <span class="relative z-10">Instalar</span>
+                  <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout> 

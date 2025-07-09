@@ -1,0 +1,221 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Precios - StartAI">
+  <Header />
+  
+  <!-- Hero de precios -->
+  <section class="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden section-padding-xl">
+    <div class="absolute inset-0 gradient-bg opacity-30"></div>
+    
+    <div class="container-xl">
+      <div class="relative z-10 animate-fade-in-up max-w-4xl mx-auto">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display mb-8 lg:mb-12 leading-tight">
+          Planes <span class="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">simples</span> y transparentes
+        </h1>
+        <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto mb-12 lg:mb-16 leading-relaxed font-light">
+          Elige el plan que mejor se adapte a tu negocio. Sin costos ocultos, sin sorpresas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Planes de precios -->
+  <section class="section-padding-lg relative bg-gradient-to-b from-transparent to-gray-900/20">
+    <div class="container-xl">
+      <!-- Toggle de facturación -->
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center bg-gray-800/50 rounded-full p-1 glass-effect">
+          <button class="btn btn-ghost btn-sm rounded-full px-6 py-2 font-heading">Mensual</button>
+          <button class="btn btn-primary btn-sm rounded-full px-6 py-2 font-heading">Anual <span class="text-xs ml-1">-20%</span></button>
+        </div>
+      </div>
+
+      <!-- Grid de planes -->
+      <div class="grid-responsive-lg">
+        <!-- Plan Starter -->
+        <div class="card card-glass card-hover p-8 lg:p-10 group">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl lg:text-3xl font-heading mb-4 text-white">Starter</h3>
+            <div class="text-4xl lg:text-5xl font-display bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
+              $29
+            </div>
+            <p class="text-gray-400 text-sm lg:text-base">por mes</p>
+          </div>
+          
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center text-gray-300">
+              <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Hasta 1,000 contactos
+            </li>
+            <li class="flex items-center text-gray-300">
+              <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              5 integraciones
+            </li>
+            <li class="flex items-center text-gray-300">
+              <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Soporte por email
+            </li>
+            <li class="flex items-center text-gray-300">
+              <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Análisis básico
+            </li>
+          </ul>
+          
+          <a href="#signup" class="btn btn-secondary btn-lg font-heading w-full group">
+            <span class="relative z-10">Comenzar gratis</span>
+            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Plan Professional -->
+        <div class="card card-glass card-hover card-glow p-8 lg:p-10 group relative">
+          <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+            <span class="bg-gradient-to-r from-purple-400 to-pink-400 text-white text-xs font-heading px-4 py-2 rounded-full">
+              Más popular
+            </span>
+          </div>
+          
+          <div class="text-center mb-8">
+            <h3 class="text-2xl lg:text-3xl font-heading mb-4 text-white">Professional</h3>
+            <div class="text-4xl lg:text-5xl font-display bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
+              $99
+            </div>
+            <p class="text-gray-400 text-sm lg:text-base">por mes</p>
+          </div>
+          
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center text-gray-300">
+              <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Hasta 10,000 contactos
+            </li>
+            <li class="flex items-center text-gray-300">
+              <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              25 integraciones
+            </li>
+            <li class="flex items-center text-gray-300">
+              <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Soporte prioritario
+            </li>
+            <li class="flex items-center text-gray-300">
+              <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Análisis avanzado
+            </li>
+            <li class="flex items-center text-gray-300">
+              <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              API completa
+            </li>
+          </ul>
+          
+          <a href="#signup" class="btn btn-primary btn-lg font-heading w-full group">
+            <span class="relative z-10">Comenzar ahora</span>
+            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Plan Enterprise -->
+        <div class="card card-glass card-hover p-8 lg:p-10 group">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl lg:text-3xl font-heading mb-4 text-white">Enterprise</h3>
+            <div class="text-4xl lg:text-5xl font-display bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent mb-2">
+              $299
+            </div>
+            <p class="text-gray-400 text-sm lg:text-base">por mes</p>
+          </div>
+          
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center text-gray-300">
+              <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Contactos ilimitados
+            </li>
+            <li class="flex items-center text-gray-300">
+              <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Todas las integraciones
+            </li>
+            <li class="flex items-center text-gray-300">
+              <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Soporte 24/7
+            </li>
+            <li class="flex items-center text-gray-300">
+              <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Análisis predictivo
+            </li>
+            <li class="flex items-center text-gray-300">
+              <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Gestor de cuenta dedicado
+            </li>
+          </ul>
+          
+          <a href="#contact" class="btn btn-secondary btn-lg font-heading w-full group">
+            <span class="relative z-10">Contactar ventas</span>
+            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="text-center mt-20">
+        <h3 class="text-3xl lg:text-4xl font-display mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          Preguntas frecuentes
+        </h3>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div class="card card-glass p-6 text-left">
+            <h4 class="text-lg font-heading text-white mb-3">¿Puedo cambiar de plan en cualquier momento?</h4>
+            <p class="text-gray-400 text-sm lg:text-base">Sí, puedes actualizar o degradar tu plan en cualquier momento desde tu panel de control.</p>
+          </div>
+          <div class="card card-glass p-6 text-left">
+            <h4 class="text-lg font-heading text-white mb-3">¿Hay un período de prueba gratuito?</h4>
+            <p class="text-gray-400 text-sm lg:text-base">Ofrecemos 14 días de prueba gratuita en todos nuestros planes sin compromiso.</p>
+          </div>
+          <div class="card card-glass p-6 text-left">
+            <h4 class="text-lg font-heading text-white mb-3">¿Qué métodos de pago aceptan?</h4>
+            <p class="text-gray-400 text-sm lg:text-base">Aceptamos todas las tarjetas principales, PayPal y transferencias bancarias para planes Enterprise.</p>
+          </div>
+          <div class="card card-glass p-6 text-left">
+            <h4 class="text-lg font-heading text-white mb-3">¿Puedo cancelar mi suscripción?</h4>
+            <p class="text-gray-400 text-sm lg:text-base">Sí, puedes cancelar en cualquier momento. No hay penalizaciones ni costos ocultos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout> 

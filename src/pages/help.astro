@@ -1,0 +1,239 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Centro de Ayuda - StartAI">
+  <Header />
+  
+  <!-- Hero de ayuda -->
+  <section class="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden section-padding-xl">
+    <div class="absolute inset-0 gradient-bg opacity-30"></div>
+    
+    <div class="container-xl">
+      <div class="relative z-10 animate-fade-in-up max-w-4xl mx-auto">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display mb-8 lg:mb-12 leading-tight">
+          ¿Cómo podemos <span class="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">ayudarte</span>?
+        </h1>
+        <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto mb-12 lg:mb-16 leading-relaxed font-light">
+          Encuentra respuestas rápidas a tus preguntas y aprende a aprovechar al máximo StartAI
+        </p>
+        
+        <!-- Buscador -->
+        <div class="max-w-2xl mx-auto">
+          <div class="relative">
+            <input type="text" placeholder="Buscar en la documentación..." class="w-full px-6 py-4 bg-gray-800/50 border border-gray-700 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors duration-300 text-lg">
+            <button class="absolute right-2 top-2 btn btn-primary btn-md font-heading">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contenido de ayuda -->
+  <section class="section-padding-lg relative bg-gradient-to-b from-transparent to-gray-900/20">
+    <div class="container-xl">
+      <!-- Categorías principales -->
+      <div class="grid-responsive-lg mb-16">
+        <div class="card card-glass card-hover p-8 lg:p-10 group">
+          <div class="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-heading text-white mb-4">Primeros pasos</h3>
+          <p class="text-gray-400 text-sm lg:text-base mb-6 leading-relaxed">
+            Guías paso a paso para configurar tu cuenta y comenzar a usar StartAI.
+          </p>
+          <a href="#" class="btn btn-secondary btn-sm font-heading group">
+            <span class="relative z-10">Explorar</span>
+            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="card card-glass card-hover p-8 lg:p-10 group">
+          <div class="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-heading text-white mb-4">Funcionalidades</h3>
+          <p class="text-gray-400 text-sm lg:text-base mb-6 leading-relaxed">
+            Aprende a usar todas las características y herramientas de StartAI.
+          </p>
+          <a href="#" class="btn btn-secondary btn-sm font-heading group">
+            <span class="relative z-10">Explorar</span>
+            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="card card-glass card-hover p-8 lg:p-10 group">
+          <div class="w-16 h-16 bg-pink-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-8 h-8 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-heading text-white mb-4">Integraciones</h3>
+          <p class="text-gray-400 text-sm lg:text-base mb-6 leading-relaxed">
+            Configura y optimiza las integraciones con tus herramientas favoritas.
+          </p>
+          <a href="#" class="btn btn-secondary btn-sm font-heading group">
+            <span class="relative z-10">Explorar</span>
+            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Preguntas frecuentes -->
+      <div class="mb-16">
+        <h2 class="text-3xl lg:text-4xl font-display mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          Preguntas frecuentes
+        </h2>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div class="card card-glass p-6">
+            <h3 class="text-lg font-heading text-white mb-3">¿Cómo cambio mi plan de suscripción?</h3>
+            <p class="text-gray-400 text-sm lg:text-base">
+              Puedes cambiar tu plan desde la sección de Facturación en tu panel de control. Los cambios se aplican inmediatamente.
+            </p>
+          </div>
+          
+          <div class="card card-glass p-6">
+            <h3 class="text-lg font-heading text-white mb-3">¿Puedo exportar mis datos?</h3>
+            <p class="text-gray-400 text-sm lg:text-base">
+              Sí, puedes exportar todos tus datos en formato CSV o JSON desde la sección de Configuración de tu cuenta.
+            </p>
+          </div>
+          
+          <div class="card card-glass p-6">
+            <h3 class="text-lg font-heading text-white mb-3">¿Cómo configuro las notificaciones?</h3>
+            <p class="text-gray-400 text-sm lg:text-base">
+              Ve a Configuración > Notificaciones para personalizar qué alertas recibes y cómo las recibes.
+            </p>
+          </div>
+          
+          <div class="card card-glass p-6">
+            <h3 class="text-lg font-heading text-white mb-3">¿Hay límites en el número de contactos?</h3>
+            <p class="text-gray-400 text-sm lg:text-base">
+              Los límites varían según tu plan. Consulta la página de Precios para ver los detalles de cada plan.
+            </p>
+          </div>
+          
+          <div class="card card-glass p-6">
+            <h3 class="text-lg font-heading text-white mb-3">¿Cómo puedo obtener soporte técnico?</h3>
+            <p class="text-gray-400 text-sm lg:text-base">
+              Puedes contactarnos por email, chat en vivo, o crear un ticket de soporte desde tu panel de control.
+            </p>
+          </div>
+          
+          <div class="card card-glass p-6">
+            <h3 class="text-lg font-heading text-white mb-3">¿Es seguro StartAI?</h3>
+            <p class="text-gray-400 text-sm lg:text-base">
+              Sí, utilizamos encriptación de nivel bancario y cumplimos con las regulaciones de seguridad más estrictas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recursos adicionales -->
+      <div class="mb-16">
+        <h2 class="text-3xl lg:text-4xl font-display mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          Recursos adicionales
+        </h2>
+        
+        <div class="grid-responsive-lg">
+          <div class="card card-glass card-hover p-8 lg:p-10 group">
+            <div class="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-heading text-white mb-4">Tutoriales en video</h3>
+            <p class="text-gray-400 text-sm lg:text-base mb-6 leading-relaxed">
+              Aprende con nuestros tutoriales paso a paso en video.
+            </p>
+            <a href="#" class="btn btn-secondary btn-sm font-heading group">
+              <span class="relative z-10">Ver videos</span>
+              <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+          </div>
+
+          <div class="card card-glass card-hover p-8 lg:p-10 group">
+            <div class="w-16 h-16 bg-yellow-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-heading text-white mb-4">Documentación técnica</h3>
+            <p class="text-gray-400 text-sm lg:text-base mb-6 leading-relaxed">
+              Documentación completa para desarrolladores y usuarios técnicos.
+            </p>
+            <a href="/api" class="btn btn-secondary btn-sm font-heading group">
+              <span class="relative z-10">Leer docs</span>
+              <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+          </div>
+
+          <div class="card card-glass card-hover p-8 lg:p-10 group">
+            <div class="w-16 h-16 bg-red-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-heading text-white mb-4">Contactar soporte</h3>
+            <p class="text-gray-400 text-sm lg:text-base mb-6 leading-relaxed">
+              ¿No encuentras lo que buscas? Nuestro equipo está aquí para ayudarte.
+            </p>
+            <a href="/contact" class="btn btn-secondary btn-sm font-heading group">
+              <span class="relative z-10">Contactar</span>
+              <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center">
+        <h3 class="text-3xl lg:text-4xl font-display mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          ¿Necesitas ayuda personalizada?
+        </h3>
+        <p class="text-gray-400 text-lg lg:text-xl mb-8 max-w-2xl mx-auto">
+          Nuestro equipo de soporte está disponible 24/7 para ayudarte con cualquier consulta
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="btn btn-primary btn-lg font-heading group">
+            <span class="relative z-10">Contactar soporte</span>
+            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </a>
+          <a href="#" class="btn btn-secondary btn-lg font-heading group">
+            <span class="relative z-10">Chat en vivo</span>
+            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout> 

@@ -1,0 +1,285 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Estado del Servicio - StartAI">
+  <Header />
+  
+  <!-- Hero de estado -->
+  <section class="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden section-padding-xl">
+    <div class="absolute inset-0 gradient-bg opacity-30"></div>
+    
+    <div class="container-xl">
+      <div class="relative z-10 animate-fade-in-up max-w-4xl mx-auto">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display mb-8 lg:mb-12 leading-tight">
+          Estado del <span class="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">servicio</span>
+        </h1>
+        <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto mb-12 lg:mb-16 leading-relaxed font-light">
+          Monitorea el estado de todos nuestros servicios en tiempo real
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Estado general -->
+  <section class="section-padding-lg relative bg-gradient-to-b from-transparent to-gray-900/20">
+    <div class="container-xl">
+      <!-- Estado general -->
+      <div class="text-center mb-16">
+        <div class="card card-glass p-8 lg:p-10 max-w-2xl mx-auto">
+          <div class="flex items-center justify-center mb-6">
+            <div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mr-4">
+              <svg class="w-8 h-8 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <div class="text-left">
+              <h2 class="text-2xl lg:text-3xl font-heading text-white">Todos los sistemas operativos</h2>
+              <p class="text-green-400 text-sm lg:text-base">Última actualización: hace 2 minutos</p>
+            </div>
+          </div>
+          <p class="text-gray-400 text-lg">
+            Todos nuestros servicios están funcionando normalmente. No hay problemas reportados.
+          </p>
+        </div>
+      </div>
+
+      <!-- Estadísticas de tiempo de actividad -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16">
+        <div class="card card-glass p-6 text-center">
+          <div class="text-3xl lg:text-4xl font-display bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
+            99.9%
+          </div>
+          <p class="text-gray-400 text-sm lg:text-base">Tiempo de actividad (30 días)</p>
+        </div>
+        <div class="card card-glass p-6 text-center">
+          <div class="text-3xl lg:text-4xl font-display bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
+            99.8%
+          </div>
+          <p class="text-gray-400 text-sm lg:text-base">Tiempo de actividad (90 días)</p>
+        </div>
+        <div class="card card-glass p-6 text-center">
+          <div class="text-3xl lg:text-4xl font-display bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent mb-2">
+            99.7%
+          </div>
+          <p class="text-gray-400 text-sm lg:text-base">Tiempo de actividad (1 año)</p>
+        </div>
+      </div>
+
+      <!-- Servicios individuales -->
+      <div class="mb-16">
+        <h2 class="text-3xl lg:text-4xl font-display mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          Estado de servicios
+        </h2>
+        
+        <div class="grid-responsive-lg">
+          <!-- API -->
+          <div class="card card-glass p-6">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center">
+                <div class="w-4 h-4 bg-green-400 rounded-full mr-3"></div>
+                <h3 class="text-lg font-heading text-white">API REST</h3>
+              </div>
+              <span class="bg-green-500/20 text-green-400 text-xs font-heading px-3 py-1 rounded-full">
+                Operativo
+              </span>
+            </div>
+            <p class="text-gray-400 text-sm mb-4">
+              API principal para integraciones y desarrollo
+            </p>
+            <div class="text-xs text-gray-500">
+              Última verificación: hace 1 minuto
+            </div>
+          </div>
+
+          <!-- Dashboard -->
+          <div class="card card-glass p-6">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center">
+                <div class="w-4 h-4 bg-green-400 rounded-full mr-3"></div>
+                <h3 class="text-lg font-heading text-white">Dashboard</h3>
+              </div>
+              <span class="bg-green-500/20 text-green-400 text-xs font-heading px-3 py-1 rounded-full">
+                Operativo
+              </span>
+            </div>
+            <p class="text-gray-400 text-sm mb-4">
+              Panel de control web para usuarios
+            </p>
+            <div class="text-xs text-gray-500">
+              Última verificación: hace 1 minuto
+            </div>
+          </div>
+
+          <!-- Análisis -->
+          <div class="card card-glass p-6">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center">
+                <div class="w-4 h-4 bg-green-400 rounded-full mr-3"></div>
+                <h3 class="text-lg font-heading text-white">Análisis</h3>
+              </div>
+              <span class="bg-green-500/20 text-green-400 text-xs font-heading px-3 py-1 rounded-full">
+                Operativo
+              </span>
+            </div>
+            <p class="text-gray-400 text-sm mb-4">
+              Motor de análisis y predicciones
+            </p>
+            <div class="text-xs text-gray-500">
+              Última verificación: hace 2 minutos
+            </div>
+          </div>
+
+          <!-- Integraciones -->
+          <div class="card card-glass p-6">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center">
+                <div class="w-4 h-4 bg-green-400 rounded-full mr-3"></div>
+                <h3 class="text-lg font-heading text-white">Integraciones</h3>
+              </div>
+              <span class="bg-green-500/20 text-green-400 text-xs font-heading px-3 py-1 rounded-full">
+                Operativo
+              </span>
+            </div>
+            <p class="text-gray-400 text-sm mb-4">
+              Conectores de terceros y webhooks
+            </p>
+            <div class="text-xs text-gray-500">
+              Última verificación: hace 3 minutos
+            </div>
+          </div>
+
+          <!-- Base de datos -->
+          <div class="card card-glass p-6">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center">
+                <div class="w-4 h-4 bg-green-400 rounded-full mr-3"></div>
+                <h3 class="text-lg font-heading text-white">Base de datos</h3>
+              </div>
+              <span class="bg-green-500/20 text-green-400 text-xs font-heading px-3 py-1 rounded-full">
+                Operativo
+              </span>
+            </div>
+            <p class="text-gray-400 text-sm mb-4">
+              Almacenamiento y gestión de datos
+            </p>
+            <div class="text-xs text-gray-500">
+              Última verificación: hace 1 minuto
+            </div>
+          </div>
+
+          <!-- CDN -->
+          <div class="card card-glass p-6">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center">
+                <div class="w-4 h-4 bg-green-400 rounded-full mr-3"></div>
+                <h3 class="text-lg font-heading text-white">CDN</h3>
+              </div>
+              <span class="bg-green-500/20 text-green-400 text-xs font-heading px-3 py-1 rounded-full">
+                Operativo
+              </span>
+            </div>
+            <p class="text-gray-400 text-sm mb-4">
+              Red de distribución de contenido
+            </p>
+            <div class="text-xs text-gray-500">
+              Última verificación: hace 1 minuto
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Historial de incidentes -->
+      <div class="mb-16">
+        <h2 class="text-3xl lg:text-4xl font-display mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          Historial de incidentes
+        </h2>
+        
+        <div class="space-y-6">
+          <div class="card card-glass p-6">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <h3 class="text-lg font-heading text-white mb-2">Mantenimiento programado - API</h3>
+                <p class="text-gray-400 text-sm lg:text-base mb-2">
+                  Actualización de seguridad y mejoras de rendimiento en la API REST.
+                </p>
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <span>Resuelto</span>
+                  <span>•</span>
+                  <span>15 de diciembre, 2024</span>
+                  <span>•</span>
+                  <span>2 horas de duración</span>
+                </div>
+              </div>
+              <span class="bg-blue-500/20 text-blue-400 text-xs font-heading px-3 py-1 rounded-full">
+                Mantenimiento
+              </span>
+            </div>
+          </div>
+
+          <div class="card card-glass p-6">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <h3 class="text-lg font-heading text-white mb-2">Problema de latencia - Dashboard</h3>
+                <p class="text-gray-400 text-sm lg:text-base mb-2">
+                  Incremento temporal en los tiempos de respuesta del dashboard.
+                </p>
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <span>Resuelto</span>
+                  <span>•</span>
+                  <span>8 de diciembre, 2024</span>
+                  <span>•</span>
+                  <span>45 minutos de duración</span>
+                </div>
+              </div>
+              <span class="bg-yellow-500/20 text-yellow-400 text-xs font-heading px-3 py-1 rounded-full">
+                Degradado
+              </span>
+            </div>
+          </div>
+
+          <div class="card card-glass p-6">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <h3 class="text-lg font-heading text-white mb-2">Interrupción - Integraciones</h3>
+                <p class="text-gray-400 text-sm lg:text-base mb-2">
+                  Problema temporal con algunos conectores de terceros.
+                </p>
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <span>Resuelto</span>
+                  <span>•</span>
+                  <span>1 de diciembre, 2024</span>
+                  <span>•</span>
+                  <span>1 hora de duración</span>
+                </div>
+              </div>
+              <span class="bg-red-500/20 text-red-400 text-xs font-heading px-3 py-1 rounded-full">
+                Interrupción
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Suscripción -->
+      <div class="text-center">
+        <h3 class="text-3xl lg:text-4xl font-display mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          Mantente informado
+        </h3>
+        <p class="text-gray-400 text-lg lg:text-xl mb-8 max-w-2xl mx-auto">
+          Recibe notificaciones sobre el estado del servicio y actualizaciones importantes
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+          <input type="email" placeholder="Tu email" class="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors duration-300">
+          <button class="btn btn-primary btn-md font-heading">
+            Suscribirse
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout> 

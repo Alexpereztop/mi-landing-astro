@@ -1,0 +1,221 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Integraciones - StartAI">
+  <Header />
+  
+  <!-- Hero de integraciones -->
+  <section class="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden section-padding-xl">
+    <div class="absolute inset-0 gradient-bg opacity-30"></div>
+    
+    <div class="container-xl">
+      <div class="relative z-10 animate-fade-in-up max-w-4xl mx-auto">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display mb-8 lg:mb-12 leading-tight">
+          Conecta con tus <span class="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">herramientas</span> favoritas
+        </h1>
+        <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto mb-12 lg:mb-16 leading-relaxed font-light">
+          Integra StartAI con más de 100 herramientas populares para automatizar tu flujo de trabajo
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categorías de integraciones -->
+  <section class="section-padding-lg relative bg-gradient-to-b from-transparent to-gray-900/20">
+    <div class="container-xl">
+      <!-- Filtros -->
+      <div class="text-center mb-16">
+        <div class="flex flex-wrap justify-center gap-4">
+          <button class="btn btn-primary btn-sm font-heading">Todas</button>
+          <button class="btn btn-ghost btn-sm font-heading">CRM</button>
+          <button class="btn btn-ghost btn-sm font-heading">Marketing</button>
+          <button class="btn btn-ghost btn-sm font-heading">Productividad</button>
+          <button class="btn btn-ghost btn-sm font-heading">Análisis</button>
+          <button class="btn btn-ghost btn-sm font-heading">Comunicación</button>
+        </div>
+      </div>
+
+      <!-- Grid de integraciones -->
+      <div class="grid-responsive-lg">
+        <!-- Salesforce -->
+        <div class="card card-glass card-hover p-8 lg:p-10 group">
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span class="bg-green-500/20 text-green-400 text-xs font-heading px-3 py-1 rounded-full">
+              Popular
+            </span>
+          </div>
+          <h3 class="text-xl font-heading text-white mb-3">Salesforce</h3>
+          <p class="text-gray-400 text-sm lg:text-base mb-6 leading-relaxed">
+            Sincroniza contactos, oportunidades y leads automáticamente con tu CRM de Salesforce.
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">Tiempo de configuración: 5 min</span>
+            <a href="#" class="btn btn-secondary btn-sm font-heading group">
+              <span class="relative z-10">Conectar</span>
+              <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- HubSpot -->
+        <div class="card card-glass card-hover p-8 lg:p-10 group">
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-16 h-16 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span class="bg-blue-500/20 text-blue-400 text-xs font-heading px-3 py-1 rounded-full">
+              Nuevo
+            </span>
+          </div>
+          <h3 class="text-xl font-heading text-white mb-3">HubSpot</h3>
+          <p class="text-gray-400 text-sm lg:text-base mb-6 leading-relaxed">
+            Automatiza el marketing y ventas con integración completa de HubSpot CRM y Marketing Hub.
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">Tiempo de configuración: 3 min</span>
+            <a href="#" class="btn btn-secondary btn-sm font-heading group">
+              <span class="relative z-10">Conectar</span>
+              <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Slack -->
+        <div class="card card-glass card-hover p-8 lg:p-10 group">
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="text-xl font-heading text-white mb-3">Slack</h3>
+          <p class="text-gray-400 text-sm lg:text-base mb-6 leading-relaxed">
+            Recibe notificaciones en tiempo real y automatiza respuestas en tus canales de Slack.
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">Tiempo de configuración: 2 min</span>
+            <a href="#" class="btn btn-secondary btn-sm font-heading group">
+              <span class="relative z-10">Conectar</span>
+              <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Zapier -->
+        <div class="card card-glass card-hover p-8 lg:p-10 group">
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-16 h-16 bg-red-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-red-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="text-xl font-heading text-white mb-3">Zapier</h3>
+          <p class="text-gray-400 text-sm lg:text-base mb-6 leading-relaxed">
+            Conecta con más de 5,000 aplicaciones a través de Zapier para automatizaciones avanzadas.
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">Tiempo de configuración: 10 min</span>
+            <a href="#" class="btn btn-secondary btn-sm font-heading group">
+              <span class="relative z-10">Conectar</span>
+              <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Google Analytics -->
+        <div class="card card-glass card-hover p-8 lg:p-10 group">
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="text-xl font-heading text-white mb-3">Google Analytics</h3>
+          <p class="text-gray-400 text-sm lg:text-base mb-6 leading-relaxed">
+            Importa datos de Analytics para análisis predictivo y optimización de conversiones.
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">Tiempo de configuración: 5 min</span>
+            <a href="#" class="btn btn-secondary btn-sm font-heading group">
+              <span class="relative z-10">Conectar</span>
+              <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mailchimp -->
+        <div class="card card-glass card-hover p-8 lg:p-10 group">
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-16 h-16 bg-yellow-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="text-xl font-heading text-white mb-3">Mailchimp</h3>
+          <p class="text-gray-400 text-sm lg:text-base mb-6 leading-relaxed">
+            Sincroniza listas de contactos y automatiza campañas de email marketing.
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">Tiempo de configuración: 3 min</span>
+            <a href="#" class="btn btn-secondary btn-sm font-heading group">
+              <span class="relative z-10">Conectar</span>
+              <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center mt-20">
+        <h3 class="text-3xl lg:text-4xl font-display mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          ¿No encuentras tu herramienta?
+        </h3>
+        <p class="text-gray-400 text-lg lg:text-xl mb-8 max-w-2xl mx-auto">
+          Estamos constantemente agregando nuevas integraciones. Solicita una integración personalizada.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="btn btn-primary btn-lg font-heading group">
+            <span class="relative z-10">Solicitar integración</span>
+            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </a>
+          <a href="/api" class="btn btn-secondary btn-lg font-heading group">
+            <span class="relative z-10">Ver documentación API</span>
+            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout> 
