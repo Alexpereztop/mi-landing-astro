@@ -1,0 +1,73 @@
+---
+// Header component
+---
+
+<!-- Header con efecto glass mejorado y responsive -->
+<header class="fixed top-0 w-full z-50 glass-effect-strong border-b border-white/10">
+  <div class="container-xl">
+    <div class="flex justify-between items-center py-4 lg:py-6">
+      <!-- Logo -->
+      <h1 class="text-2xl lg:text-3xl font-display tracking-tight bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse-slow hover-scale">
+        StartAI
+      </h1>
+      
+      <!-- Navegación desktop -->
+      <nav class="hidden lg:flex space-x-8 text-gray-300">
+        <a href="#features" class="font-heading text-sm lg:text-base hover:text-white transition-all duration-300 relative group">
+          Características
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#pricing" class="font-heading text-sm lg:text-base hover:text-white transition-all duration-300 relative group">
+          Precios
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#contact" class="font-heading text-sm lg:text-base hover:text-white transition-all duration-300 relative group">
+          Contacto
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-400 to-red-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </nav>
+      
+      <!-- Botones de acción desktop -->
+      <div class="hidden lg:flex items-center space-x-4">
+        <a href="#login" class="btn btn-ghost btn-sm font-heading">
+          Iniciar sesión
+        </a>
+        <a href="#signup" class="btn btn-primary btn-sm font-heading">
+          Registrarse
+        </a>
+      </div>
+      
+      <!-- Botón móvil -->
+      <button class="lg:hidden btn btn-ghost btn-sm p-2 text-gray-300 hover:text-white transition-colors duration-300 hover-glow">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  
+  <!-- Menú móvil (oculto por defecto) -->
+  <div class="lg:hidden hidden bg-gray-900/95 backdrop-blur-lg border-t border-white/10">
+    <div class="container-xl py-4">
+      <nav class="flex flex-col space-y-4">
+        <a href="#features" class="font-heading text-base hover:text-blue-400 transition-colors duration-300 py-2">
+          Características
+        </a>
+        <a href="#pricing" class="font-heading text-base hover:text-purple-400 transition-colors duration-300 py-2">
+          Precios
+        </a>
+        <a href="#contact" class="font-heading text-base hover:text-pink-400 transition-colors duration-300 py-2">
+          Contacto
+        </a>
+        <div class="flex flex-col space-y-3 pt-4 border-t border-white/10">
+          <a href="#login" class="btn btn-ghost btn-md font-heading w-full">
+            Iniciar sesión
+          </a>
+          <a href="#signup" class="btn btn-primary btn-md font-heading w-full">
+            Registrarse
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
