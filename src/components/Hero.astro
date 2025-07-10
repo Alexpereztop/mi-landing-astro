@@ -2,74 +2,65 @@
 // Hero component
 ---
 
-<!-- Hero con gradiente animado mejorado y responsive -->
-<section class="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden section-padding-xl">
-  <!-- Imagen de fondo del robot de IA -->
-  <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style="background-image: url('https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+<!-- Hero con fondo plano de marca y elementos decorativos simples -->
+<section class="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden section-padding-xl bg-[var(--brand-purple)]">
+  <!-- Imagen de fondo del robot de IA (mantener, pero con más opacidad para contraste) -->
+  <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30" style="background-image: url('/top-learning-robot-bg.jpg');"></div>
   
-  <!-- Fondo con gradiente animado mejorado -->
-  <div class="absolute inset-0 gradient-bg opacity-40"></div>
-  
-  <!-- Elementos decorativos flotantes mejorados -->
-  <div class="absolute top-20 left-10 w-24 h-24 bg-blue-500/20 rounded-full animate-float blur-sm hover-scale"></div>
-  <div class="absolute top-40 right-20 w-20 h-20 bg-purple-500/20 rounded-full animate-float blur-sm hover-scale" style="animation-delay: 1s;"></div>
-  <div class="absolute bottom-40 left-20 w-16 h-16 bg-pink-500/20 rounded-full animate-float blur-sm hover-scale" style="animation-delay: 2s;"></div>
-  <div class="absolute top-1/2 right-10 w-12 h-12 bg-cyan-500/20 rounded-full animate-float blur-sm hover-scale" style="animation-delay: 3s;"></div>
-  <div class="absolute bottom-20 right-1/4 w-8 h-8 bg-orange-500/20 rounded-full animate-float blur-sm hover-scale" style="animation-delay: 4s;"></div>
+  <!-- Elementos decorativos flotantes simplificados -->
+  <div class="absolute top-20 left-10 w-24 h-24 bg-[var(--brand-orange)]/10 rounded-full blur-sm"></div>
+  <div class="absolute top-40 right-20 w-20 h-20 bg-[var(--brand-purple)]/10 rounded-full blur-sm"></div>
+  <div class="absolute bottom-40 left-20 w-16 h-16 bg-[var(--brand-gray)]/10 rounded-full blur-sm"></div>
+  <div class="absolute top-1/2 right-10 w-12 h-12 bg-[var(--brand-orange)]/10 rounded-full blur-sm"></div>
+  <div class="absolute bottom-20 right-1/4 w-8 h-8 bg-[var(--brand-purple)]/10 rounded-full blur-sm"></div>
   
   <div class="container-xl">
     <div class="relative z-10 animate-fade-in-up max-w-5xl mx-auto">
-      <h2 class="text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-display mb-8 lg:mb-12 leading-tight">
-        Potencia tu <span class="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent hover-scale inline-block">negocio</span> con IA
+      <h2 class="text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-display mb-8 lg:mb-12 leading-tight text-[var(--brand-white)]">
+        Potencia tu <span class="text-[var(--brand-orange)] font-display">negocio</span> con IA
       </h2>
-      <p class="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-gray-300 max-w-4xl mx-auto mb-12 lg:mb-16 leading-relaxed font-light">
+      <p class="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-[var(--brand-white)] max-w-4xl mx-auto mb-12 lg:mb-16 leading-relaxed font-body">
         Herramientas impulsadas por inteligencia artificial que transforman la forma en que automatizas tus procesos y conectas con tus clientes.
       </p>
       
-      <!-- Botones mejorados -->
+      <!-- Botones de marca -->
       <div class="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center items-center mb-16">
         <a href="/signup" class="btn btn-primary btn-lg lg:btn-xl font-heading min-w-[200px] lg:min-w-[250px] group">
           <span class="relative z-10">Comenzar ahora</span>
-          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-          </svg>
         </a>
         <a href="#features" class="btn btn-secondary btn-lg lg:btn-xl font-heading min-w-[200px] lg:min-w-[250px] group">
           <span class="relative z-10">Ver más</span>
-          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-          </svg>
         </a>
       </div>
       
       <!-- Estadísticas rápidas -->
       <div class="grid grid-cols-3 gap-4 lg:gap-8 max-w-2xl mx-auto">
         <div class="text-center group">
-          <div class="text-2xl lg:text-3xl font-display bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-1 group-hover:scale-110 transition-transform duration-300">
+          <div class="text-2xl lg:text-3xl font-display text-[var(--brand-orange)] mb-1">
             10K+
           </div>
-          <p class="text-xs lg:text-sm text-gray-400 font-heading">Clientes</p>
+          <p class="text-xs lg:text-sm text-[var(--brand-white)] font-heading">Clientes</p>
         </div>
         <div class="text-center group">
-          <div class="text-2xl lg:text-3xl font-display bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-1 group-hover:scale-110 transition-transform duration-300">
+          <div class="text-2xl lg:text-3xl font-display text-[var(--brand-purple)] mb-1">
             99.9%
           </div>
-          <p class="text-xs lg:text-sm text-gray-400 font-heading">Uptime</p>
+          <p class="text-xs lg:text-sm text-[var(--brand-white)] font-heading">Uptime</p>
         </div>
         <div class="text-center group">
-          <div class="text-2xl lg:text-3xl font-display bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent mb-1 group-hover:scale-110 transition-transform duration-300">
+          <div class="text-2xl lg:text-3xl font-display text-[var(--brand-gray)] mb-1">
             50+
           </div>
-          <p class="text-xs lg:text-sm text-gray-400 font-heading">Apps</p>
+          <p class="text-xs lg:text-sm text-[var(--brand-white)] font-heading">Apps</p>
         </div>
       </div>
     </div>
   </div>
   
-  <!-- Scroll indicator mejorado -->
+  <!-- Scroll indicator simplificado -->
   <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
-    <div class="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center hover-glow cursor-pointer">
-      <div class="w-1 h-3 bg-gradient-to-b from-blue-400 to-purple-400 rounded-full mt-2 animate-pulse"></div>
+    <div class="w-6 h-10 border-2 border-[var(--brand-orange)] rounded-full flex justify-center cursor-pointer">
+      <div class="w-1 h-3 bg-[var(--brand-orange)] rounded-full mt-2 animate-pulse"></div>
     </div>
   </div>
 </section>
