@@ -2,7 +2,26 @@
 // Header component
 ---
 
-<!-- Header con efecto glass mejorado y responsive -->
+<script>
+  if (typeof window !== 'undefined') {
+    window.toggleTheme = function () {
+      document.body.classList.toggle('dark');
+      // Guardar preferencia en localStorage
+      if(document.body.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    }
+    // Al cargar, aplicar preferencia guardada
+    window.addEventListener('DOMContentLoaded', () => {
+      const theme = localStorage.getItem('theme');
+      if(theme === 'dark') document.body.classList.add('dark');
+      if(theme === 'light') document.body.classList.remove('dark');
+    });
+  }
+</script>
+
 <header class="fixed top-0 w-full z-50 glass-effect-strong border-b border-white/10">
   <div class="container-xl">
     <div class="flex justify-between items-center py-4 lg:py-6">
@@ -16,15 +35,15 @@
       <nav class="hidden lg:flex space-x-8 text-gray-300">
         <a href="#features" class="font-heading text-sm lg:text-base hover:text-white transition-all duration-300 relative group">
           Características
-          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all duration-300 group-hover:w-full"></span>
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--brand-orange)] transition-all duration-300 group-hover:w-full"></span>
         </a>
         <a href="/pricing" class="font-heading text-sm lg:text-base hover:text-white transition-all duration-300 relative group">
           Precios
-          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 transition-all duration-300 group-hover:w-full"></span>
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--brand-orange)] transition-all duration-300 group-hover:w-full"></span>
         </a>
         <a href="/contact" class="font-heading text-sm lg:text-base hover:text-white transition-all duration-300 relative group">
           Contacto
-          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-400 to-red-400 transition-all duration-300 group-hover:w-full"></span>
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--brand-orange)] transition-all duration-300 group-hover:w-full"></span>
         </a>
       </nav>
       
@@ -37,6 +56,17 @@
           Registrarse
         </a>
       </div>
+      
+      <!-- Botón de cambio de modo claro/oscuro -->
+      <button onclick="window.toggleTheme()" aria-label="Cambiar modo claro/oscuro" class="ml-4 p-2 rounded-full border border-[var(--brand-purple)] bg-white/80 dark:bg-[var(--brand-purple)] dark:border-white shadow hover:scale-110 transition-transform duration-200">
+        <svg id="icon-sun" class="w-6 h-6 text-[var(--brand-purple)] dark:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="5" />
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+        </svg>
+        <svg id="icon-moon" class="w-6 h-6 text-white hidden dark:inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" />
+        </svg>
+      </button>
       
       <!-- Botón móvil -->
       <button class="lg:hidden btn btn-ghost btn-sm p-2 text-gray-300 hover:text-white transition-colors duration-300 hover-glow">
@@ -51,13 +81,13 @@
   <div class="lg:hidden hidden bg-gray-900/95 backdrop-blur-lg border-t border-white/10">
     <div class="container-xl py-4">
       <nav class="flex flex-col space-y-4">
-        <a href="#features" class="font-heading text-base hover:text-blue-400 transition-colors duration-300 py-2">
+        <a href="#features" class="font-heading text-base hover:text-[var(--brand-orange)] transition-colors duration-300 py-2">
           Características
         </a>
-        <a href="/pricing" class="font-heading text-base hover:text-purple-400 transition-colors duration-300 py-2">
+        <a href="/pricing" class="font-heading text-base hover:text-[var(--brand-orange)] transition-colors duration-300 py-2">
           Precios
         </a>
-        <a href="/contact" class="font-heading text-base hover:text-pink-400 transition-colors duration-300 py-2">
+        <a href="/contact" class="font-heading text-base hover:text-[var(--brand-orange)] transition-colors duration-300 py-2">
           Contacto
         </a>
         <div class="flex flex-col space-y-3 pt-4 border-t border-white/10">

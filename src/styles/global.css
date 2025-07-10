@@ -1,29 +1,45 @@
 @import "tailwindcss";
 
-/* Variables CSS personalizadas para Top Learning */
+/* Variables CSS personalizadas para Top Learning - Modo claro (por defecto) */
 :root {
-  /* Colores de marca */
   --brand-purple: #484494;
+  --brand-purple-dark: #2d2a6a;
   --brand-gray: #393A3A;
   --brand-orange: #F29F0E;
   --brand-white: #FFFFFF;
-  --brand-purple-light: #B8BBFF;
+  --brand-bg: #F5F5F5;
+  --brand-bg-dark: #23213a;
   --brand-gray-light: #757575;
   --brand-orange-light: #FFF7A8;
-  --brand-bg: #F5F5F5;
 
-  /* Colores de fondo */
   --bg-primary: var(--brand-white);
   --bg-secondary: #F5F5F5;
   --bg-tertiary: #ECECEC;
   --bg-glass: rgba(72, 68, 148, 0.05);
 
-  /* Colores de texto */
   --text-primary: var(--brand-purple);
   --text-secondary: var(--brand-gray);
   --text-accent: var(--brand-orange);
   --text-white: var(--brand-white);
   --text-muted: #757575;
+
+  --overlay-hero: rgba(72, 68, 148, 0.70);
+}
+
+/* Modo oscuro: activar con body.dark */
+body.dark {
+  --bg-primary: #23213a;
+  --bg-secondary: #1a1930;
+  --bg-tertiary: #18172b;
+  --bg-glass: rgba(72, 68, 148, 0.10);
+
+  --text-primary: #F5F5F5;
+  --text-secondary: #B8BBFF;
+  --text-accent: #F29F0E;
+  --text-white: #FFFFFF;
+  --text-muted: #B8BBFF;
+
+  --overlay-hero: rgba(35, 33, 58, 0.80);
 }
 
 /* Importar fuentes de Google Fonts */
@@ -44,6 +60,7 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   font-weight: 400;
+  transition: background 0.3s, color 0.3s;
 }
 
 /* Tipografías específicas */
@@ -191,7 +208,7 @@ body {
   border: none;
 }
 .btn-secondary:hover {
-  background: #2d2a6a;
+  background: var(--brand-purple-dark);
   color: var(--brand-orange);
 }
 
@@ -200,9 +217,17 @@ body {
   color: var(--brand-purple);
   border: 2px solid var(--brand-purple);
 }
+body.dark .btn-ghost {
+  color: var(--brand-white);
+  border-color: var(--brand-white);
+}
 .btn-ghost:hover {
   background: var(--brand-purple);
   color: var(--brand-white);
+}
+body.dark .btn-ghost:hover {
+  background: var(--brand-white);
+  color: var(--brand-purple);
 }
 
 /* Tamaños de botones */
@@ -261,6 +286,10 @@ body {
   background: var(--bg-glass);
   border: 1px solid #E5E5E5;
   box-shadow: 0 4px 24px rgba(72, 68, 148, 0.08);
+}
+body.dark .card-glass {
+  border: 1px solid #393A3A;
+  box-shadow: 0 4px 24px rgba(72, 68, 148, 0.18);
 }
 
 .card-hover {
